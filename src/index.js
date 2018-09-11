@@ -9,6 +9,8 @@ import reducers from "./reducers";
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+
 ReactDOM.render(
     <Provider store={store}>
         <App />
